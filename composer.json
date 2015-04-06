@@ -1,0 +1,29 @@
+{
+    "name": "jrm2k6/cloudder",
+    "description": "Cloudinary API wrapper for Laravel",
+    "keywords": ["laravel", "laravel4", "cloudinary", "api", "image", "upload"],
+    "homepage": "https://github.com/teepluss/laravel4-cloudinary",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeremy Dagorn",
+            "email": "jeremy.dagorn@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "cloudinary/cloudinary_php": "dev-master"
+    },
+    "require-dev": {
+        "illuminate/support": ">=4.1.0",
+        "phpunit/phpunit": "4.*",
+        "mockery/mockery": "0.9.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "JD\\Cloudder": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
