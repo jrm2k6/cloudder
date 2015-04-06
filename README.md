@@ -1,4 +1,6 @@
 # Cloudder
+[![Build Status](https://travis-ci.org/jrm2k6/cloudder.svg?branch=master)](https://travis-ci.org/jrm2k6/cloudder)
+
 Cloudinary wrapper for laravel
 
 __Initially forked from https://github.com/teepluss/laravel4-cloudinary.
