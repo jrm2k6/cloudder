@@ -84,17 +84,6 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    public function it_should_call_api_destroy_with_array_of_public_ids()
-    {
-        // given
-        $pids = ['pid1', 'pid2'];
-        $this->uploader->shouldReceive('destroy')->with($pids, array())->once();
-
-        // when
-        $this->cloudinary_wrapper->destroyImages($pids);
-    }
-
-    /** @test */
     public function verify_delete_alias()
     {
         // given

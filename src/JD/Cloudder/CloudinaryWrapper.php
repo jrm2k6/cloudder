@@ -167,17 +167,6 @@ class CloudinaryWrapper {
     }
 
     /**
-     * Destroy images
-     * @param  array $publicIds
-     * @param  array $options
-     * @return array
-     */
-    public function destroyImages($publicIds, $options = array())
-    {
-        return $this->getUploader()->destroy($publicIds, $options);
-    }
-
-    /**
      * Alias of destroy.
      *
      * @return array
