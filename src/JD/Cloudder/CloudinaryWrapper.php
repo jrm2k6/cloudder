@@ -48,9 +48,9 @@ class CloudinaryWrapper {
         $this->config = $config;
 
         $this->cloudinary->config(array(
-            'cloud_name' => $this->config->get('cloudinary::cloudName'),
-            'api_key'    => $this->config->get('cloudinary::apiKey'),
-            'api_secret' => $this->config->get('cloudinary::apiSecret')
+            'cloud_name' => $this->config->get('cloudder::cloudName'),
+            'api_key'    => $this->config->get('cloudder::apiKey'),
+            'api_secret' => $this->config->get('cloudder::apiSecret')
         ));
     }
 
@@ -128,7 +128,7 @@ class CloudinaryWrapper {
      */
     public function show($publicId, $options = array())
     {
-        $defaults = $this->config->get('cloudinary::scaling');
+        $defaults = $this->config->get('cloudder::scaling');
 
         $options = array_merge($defaults, $options);
 
