@@ -1,4 +1,4 @@
-# cloudder
+# Cloudder
 Cloudinary wrapper for laravel
 
 __Initially forked from https://github.com/teepluss/laravel4-cloudinary.
