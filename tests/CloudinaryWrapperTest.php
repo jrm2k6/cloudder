@@ -84,14 +84,15 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    public function verify_delete_alias()
+    public function verify_delete_alias_returns_boolean()
     {
         // given
         $pid = 'pid';
-        $this->uploader->shouldReceive('destroy')->with($pid, array())->once();
+        $this->uploader->shouldReceive('destroy')->with($pid, array())->once()->andReturn(['result' => 'ok']);
 
         // when
-        $this->cloudinary_wrapper->delete($pid);
+        $deleted = $this->cloudinary_wrapper->delete($pid);
+        $this->assertTrue($deleted);
     }
 
     /** @test */

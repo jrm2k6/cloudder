@@ -169,7 +169,7 @@ class CloudinaryWrapper {
     /**
      * Alias of destroy.
      *
-     * @return array
+     * @return boolean
      */
     public function delete($publicId, $options = array())
     {
