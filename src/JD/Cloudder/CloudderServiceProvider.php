@@ -29,7 +29,7 @@ class CloudderServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app['cloudinary'] = $this->app->share(function($app)
+		$this->app['cloudder'] = $this->app->share(function($app)
 		{
 			return new CloudinaryWrapper($app['config'], new Cloudinary, new Cloudinary\Uploader);
 		});
@@ -42,7 +42,7 @@ class CloudderServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array('cloudinary');
+		return array('cloudder');
 	}
 
 }
