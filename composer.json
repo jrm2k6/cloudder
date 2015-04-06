@@ -2,7 +2,7 @@
     "name": "jrm2k6/cloudder",
     "description": "Cloudinary API wrapper for Laravel",
     "keywords": ["laravel", "laravel4", "cloudinary", "api", "image", "upload"],
-    "homepage": "https://github.com/teepluss/laravel4-cloudinary",
+    "homepage": "https://github.com/jrm2k6/cloudder",
     "type": "library",
     "license": "MIT",
     "authors": [
