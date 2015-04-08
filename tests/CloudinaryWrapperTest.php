@@ -48,6 +48,29 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
+    public function it_should_set_uploaded_result_when_uploading_private_picture()
+    {
+        // given
+        $filename = 'filename';
+        $defaults_options = [
+            'public_id' => null,
+            'tags'      => array(),
+            'type'      => 'private'
+        ];
+
+        $expected_result = ['public_id' => '123456789'];
+
+        $this->uploader->shouldReceive('upload')->once()->with($filename, $defaults_options)->andReturn($expected_result);
+
+        // when
+        $this->cloudinary_wrapper->upload($filename, null, ['type' => 'private']);
+
+        // then
+        $result = $this->cloudinary_wrapper->getResult();
+        $this->assertEquals($expected_result, $result);
+    }
+
+    /** @test */
     public function it_should_returns_image_url_when_calling_show()
     {
         // given

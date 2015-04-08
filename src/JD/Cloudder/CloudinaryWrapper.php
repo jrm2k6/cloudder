@@ -79,10 +79,11 @@ class CloudinaryWrapper {
      *
      * @param  mixed $source
      * @param  string $publicId
-     * @param  array  $tags
+     * @param  array $uploadOptions
+     * @param  array $tags
      * @return CloudinaryWrapper
      */
-    public function upload($source, $publicId = null, $tags = array())
+    public function upload($source, $publicId = null, $uploadOptions = array(), $tags = array())
     {
         $defaults = array(
             'public_id' => null,
@@ -93,6 +94,8 @@ class CloudinaryWrapper {
             'public_id' => $publicId,
             'tags'      => $tags
         ));
+
+        $options = array_merge($options, $uploadOptions);
 
         $this->uploadedResult = $this->getUploader()->upload($source, $options);
 
@@ -169,7 +172,7 @@ class CloudinaryWrapper {
     /**
      * Alias of destroy.
      *
-     * @return boolean
+     * @return array
      */
     public function delete($publicId, $options = array())
     {
