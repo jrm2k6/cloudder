@@ -139,6 +139,24 @@ class CloudinaryWrapper {
     }
 
     /**
+     * Display private image
+     *
+     * @param string $publicId
+     * @param string $format
+     * @param array $options
+     * @return string
+     */
+
+    public function showPrivateUrl($publicId, $format, $options = array())
+    {
+        $defaults = $this->config->get('cloudder::scaling');
+
+        $options = array_merge($defaults, $options);
+
+        return $this->getCloudinary()->private_download_url($publicId, $format, $options);
+    }
+
+    /**
      * Rename public ID.
      *
      * @param  string $publicId

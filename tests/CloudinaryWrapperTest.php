@@ -83,6 +83,18 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
+    public function it_should_returns_image_url_when_calling_show_private_url()
+    {
+        // given
+        $filename = 'filename';
+        $this->config->shouldReceive('get')->with('cloudder::scaling')->once()->andReturn(array());
+        $this->cloudinary->shouldReceive('private_download_url')->once()->with($filename, 'png', array());
+
+        // when
+        $this->cloudinary_wrapper->showPrivateUrl($filename, 'png');
+    }
+
+    /** @test */
     public function it_should_call_api_rename_when_calling_rename()
     {
         // given
