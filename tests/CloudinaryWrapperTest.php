@@ -10,6 +10,7 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
         $this->config = m::mock('Illuminate\Config\Repository');
         $this->cloudinary = m::mock('Cloudinary');
         $this->uploader = m::mock('Cloudinary\Uploader');
+        $this->api = m::mock('Cloudinary\Api');
 
         $this->config->shouldReceive('get')->once()->with('cloudder::cloudName')->andReturn('cloudName');
         $this->config->shouldReceive('get')->once()->with('cloudder::apiKey')->andReturn('apiKey');
@@ -17,7 +18,7 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
 
         $this->cloudinary->shouldReceive('config')->once();
 
-        $this->cloudinary_wrapper = new CloudinaryWrapper($this->config, $this->cloudinary, $this->uploader);
+        $this->cloudinary_wrapper = new CloudinaryWrapper($this->config, $this->cloudinary, $this->uploader, $this->api);
     }
 
     public function tearDown()
@@ -151,7 +152,7 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
         $this->cloudinary_wrapper->removeTag($tag, $pids);
     }
 
-        /** @test */
+    /** @test */
     public function it_should_call_api_rename_tag_when_calling_add_tag()
     {
         $pids = ['pid1', 'pid2'];
@@ -160,5 +161,14 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
         $this->uploader->shouldReceive('replace_tag')->once()->with($tag, $pids, array());
 
         $this->cloudinary_wrapper->replaceTag($tag, $pids);
+    }
+
+    /** @test */
+    public function it_should_call_api_delete_resources_when_calling_destroy_images()
+    {
+        $pids = ['pid1', 'pid2'];
+        $this->api->shouldReceive('delete_resources')->once()->with($pids, array());
+
+        $this->cloudinary_wrapper->destroyImages($pids);
     }
 }

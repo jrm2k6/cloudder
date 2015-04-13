@@ -31,7 +31,7 @@ class CloudderServiceProvider extends ServiceProvider {
 	{
 		$this->app['cloudder'] = $this->app->share(function($app)
 		{
-			return new CloudinaryWrapper($app['config'], new Cloudinary, new Cloudinary\Uploader);
+			return new CloudinaryWrapper($app['config'], new Cloudinary, new Cloudinary\Uploader, new Cloudinary\Api);
 		});
 	}
 

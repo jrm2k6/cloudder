@@ -39,11 +39,14 @@ class CloudinaryWrapper {
      * @param  \Illuminate\Config\Repository $config
      * @return void
      */
-    public function __construct(Repository $config, Cloudinary $cloudinary, Cloudinary\Uploader $uploader)
+    public function __construct(Repository $config, Cloudinary $cloudinary, Cloudinary\Uploader $uploader,
+                                Cloudinary\Api $api)
     {
         $this->cloudinary = $cloudinary;
 
         $this->uploader = $uploader;
+
+        $this->api = $api;
 
         $this->config = $config;
 
@@ -72,6 +75,16 @@ class CloudinaryWrapper {
     public function getUploader()
     {
         return $this->uploader;
+    }
+
+    /**
+     * Get cloudinary api
+     *
+     * @return \Cloudinary\Api
+     */
+    public function getApi()
+    {
+        return $this->api;
     }
 
     /**
@@ -172,7 +185,7 @@ class CloudinaryWrapper {
     }
 
     /**
-     * Destroy image.
+     * Destroy image from Cloudinary
      *
      * @param  string $publicId
      * @param  array  $options
@@ -184,7 +197,18 @@ class CloudinaryWrapper {
     }
 
     /**
-     * Alias of destroy.
+     * Destroy images from Cloudinary
+     * @param  array $publicIds
+     * @param  array  $options
+     * @return null
+     */
+    public function destroyImages($publicIds, $options = array())
+    {
+        return $this->getApi()->delete_resources($publicIds, $options);
+    }
+
+    /**
+     * Alias of destroyImage.
      *
      * @return array
      */
