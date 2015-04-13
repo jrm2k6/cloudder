@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "cloudinary/cloudinary_php": "dev-master"
+        "cloudinary/cloudinary_php": ">=1.1"
     },
     "require-dev": {
         "illuminate/support": ">=4.1.0",
