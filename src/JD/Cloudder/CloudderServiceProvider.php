@@ -19,7 +19,7 @@ class CloudderServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('jd/cloudder');
+		$this->package('jrm2k6/cloudder');
 	}
 
 	/**
