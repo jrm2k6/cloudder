@@ -149,10 +149,6 @@ class CloudinaryWrapper {
 
     public function showPrivateUrl($publicId, $format, $options = array())
     {
-        $defaults = $this->config->get('cloudder::scaling');
-
-        $options = array_merge($defaults, $options);
-
         return $this->getCloudinary()->private_download_url($publicId, $format, $options);
     }
 

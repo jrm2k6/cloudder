@@ -87,7 +87,6 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
     {
         // given
         $filename = 'filename';
-        $this->config->shouldReceive('get')->with('cloudder::scaling')->once()->andReturn(array());
         $this->cloudinary->shouldReceive('private_download_url')->once()->with($filename, 'png', array());
 
         // when
