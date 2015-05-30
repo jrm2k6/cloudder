@@ -19,16 +19,6 @@ return array(
     'apiKey'     => env('CLOUDINARY_API_KEY'),
     'apiSecret'  => env('CLOUDINARY_API_SECRET'),
 
-    /*
-    |--------------------------------------------------------------------------
-    | Default image scaling to show.
-    |--------------------------------------------------------------------------
-    |
-    | If you not pass options parameter to Cloudy::show the default
-    | will be replaced.
-    |
-    */
-
     'scaling'    => array(
         'format' => 'png',
         'width'  => 150,

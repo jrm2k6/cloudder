@@ -12,9 +12,9 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
         $this->uploader = m::mock('Cloudinary\Uploader');
         $this->api = m::mock('Cloudinary\Api');
 
-        $this->config->shouldReceive('get')->once()->with('cloudder::cloudName')->andReturn('cloudName');
-        $this->config->shouldReceive('get')->once()->with('cloudder::apiKey')->andReturn('apiKey');
-        $this->config->shouldReceive('get')->once()->with('cloudder::apiSecret')->andReturn('apiSecret');
+        $this->config->shouldReceive('get')->once()->with('cloudder.cloudName')->andReturn('cloudName');
+        $this->config->shouldReceive('get')->once()->with('cloudder.apiKey')->andReturn('apiKey');
+        $this->config->shouldReceive('get')->once()->with('cloudder.apiSecret')->andReturn('apiSecret');
 
         $this->cloudinary->shouldReceive('config')->once();
 
@@ -76,7 +76,7 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
     {
         // given
         $filename = 'filename';
-        $this->config->shouldReceive('get')->with('cloudder::scaling')->once()->andReturn(array());
+        $this->config->shouldReceive('get')->with('cloudder.scaling')->once()->andReturn(array());
         $this->cloudinary->shouldReceive('cloudinary_url')->once()->with($filename, array());
 
         // when
