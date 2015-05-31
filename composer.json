@@ -25,5 +25,10 @@
             "JD\\Cloudder": "src/"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "extra": {
+        "branch-alias": {
+            "dev-l5": "0.1-dev"
+        }
+    }
 }
