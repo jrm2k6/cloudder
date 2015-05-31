@@ -16,8 +16,27 @@ As it doesn't seem to be maintained anymore, and facing the lack of response fro
 composer require jrm2k6/cloudder
 ```
 ## Configuration
-Modify ```config.php``` in jrm2k6/cloudder and all your information from your cloudinary dashboard.
-Add the following in app.php:
+Modify your ```.env``` file to add the following information from [Cloudinary](http://www.cloudinary.com)
+
+#### Required
+
+```
+CLOUDINARY_API_KEY=`your key`
+CLOUDINARY_API_SECRET=`your secret`
+CLOUDINARY_CLOUD_NAME=`your cloud name`
+```
+
+#### Optional
+
+```
+CLOUDINARY_BASE_URL
+CLOUDINARY_SECURE_URL
+CLOUDINARY_API_BASE_URL
+```
+
+Run ```php artisan vendor:publish --provider="JD\Cloudder\CloudderServiceProvider"```
+
+Add the following in config/app.php:
 ```
 'providers' => array(
   'JD\Cloudder\CloudderServiceProvider'
