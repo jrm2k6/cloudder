@@ -13,7 +13,7 @@ As it doesn't seem to be maintained anymore, and facing the lack of response fro
 ## Installation
 
 ```
-composer require jrm2k6/cloudder:0.1.*@l5
+composer require jrm2k6/cloudder:0.1.*:dev-l5
 ```
 
 
