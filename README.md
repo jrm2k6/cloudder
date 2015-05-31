@@ -7,14 +7,16 @@
 Cloudinary wrapper for Laravel 5
 
 __Initially forked from https://github.com/teepluss/laravel4-cloudinary.
-As it doesn't seem to be maintained anymore, and facing the lack of response from the original maitainer (issue opened + pull request opened, last commit on August last year), I decided to create a new fork that I plan on maintaining. We will move to Laravel 5 really soon, so I will also have a laravel 5 branch in development.__
+As it doesn't seem to be maintained anymore, and facing the lack of response from the original maitainer (issue opened + pull request opened, last commit on August last year), I decided to create a new fork that I plan on maintaining.__
 
 
 ## Installation
 
 ```
-composer require jrm2k6/cloudder
+composer require jrm2k6/cloudder:0.1.*@l5
 ```
+
+
 ## Configuration
 Modify your ```.env``` file to add the following information from [Cloudinary](http://www.cloudinary.com)
 
