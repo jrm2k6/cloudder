@@ -29,7 +29,7 @@
 
     "extra": {
         "branch-alias": {
-            "dev-l5": "0.1.6-l5"
+            "dev-l5": "0.1.*-l5"
         }
     }
 }
