@@ -16,7 +16,7 @@
         "cloudinary/cloudinary_php": ">=1.1"
     },
     "require-dev": {
-        "illuminate/support": ">=4.1.0",
+        "laravel/framework": "5.0.*",
         "phpunit/phpunit": "4.*",
         "mockery/mockery": "0.9.*"
     },
@@ -25,11 +25,5 @@
             "JD\\Cloudder": "src/"
         }
     },
-    "minimum-stability": "stable",
-
-    "extra": {
-        "branch-alias": {
-            "dev-l5": "0.1.*-l5"
-        }
-    }
+    "minimum-stability": "stable"
 }

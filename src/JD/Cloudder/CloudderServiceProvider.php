@@ -19,7 +19,13 @@ class CloudderServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('jrm2k6/cloudder');
+		$this->publishes([
+			__DIR__.'/../../../config/cloudder.php' => config_path('cloudder.php')
+		]);
+
+        $this->app['JD\Cloudder\Cloudder'] = function ($app) {
+            return $app['cloudder'];
+        };
 	}
 
 	/**

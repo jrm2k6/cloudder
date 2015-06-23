@@ -4,22 +4,43 @@
 [![Latest Version](http://img.shields.io/packagist/v/jrm2k6/cloudder.svg?style=flat-square)](https://packagist.org/packages/jrm2k6/cloudder)
 [![Total Downloads](https://img.shields.io/packagist/dt/jrm2k6/cloudder.svg?style=flat-square)](https://packagist.org/packages/jrm2k6/cloudder)
 
-Cloudinary wrapper for Laravel 4.2
+Cloudinary wrapper for Laravel 5
 
 __Initially forked from https://github.com/teepluss/laravel4-cloudinary.
 As it doesn't seem to be maintained anymore, and facing the lack of response from the original maitainer (issue opened + pull request opened, last commit on August last year), I decided to create a new fork that I plan on maintaining.__
-
-Cloudinary wrapper for [Laravel 5](https://github.com/jrm2k6/cloudder/tree/l5)
 
 
 ## Installation
 
 ```
-composer require jrm2k6/cloudder
+composer require jrm2k6/cloudder:0.2.*
 ```
+
+For people still using Laravel 4.2: ```composer require jrm2k6/cloudder:0.1.*``` and check the branch l4 for the installation instructions.
+
+
 ## Configuration
-Modify ```config.php``` in jrm2k6/cloudder and all your information from your cloudinary dashboard.
-Add the following in app.php:
+Modify your ```.env``` file to add the following information from [Cloudinary](http://www.cloudinary.com)
+
+#### Required
+
+```
+CLOUDINARY_API_KEY=`your key`
+CLOUDINARY_API_SECRET=`your secret`
+CLOUDINARY_CLOUD_NAME=`your cloud name`
+```
+
+#### Optional
+
+```
+CLOUDINARY_BASE_URL
+CLOUDINARY_SECURE_URL
+CLOUDINARY_API_BASE_URL
+```
+
+Run ```php artisan vendor:publish --provider="JD\Cloudder\CloudderServiceProvider"```
+
+Add the following in config/app.php:
 ```
 'providers' => array(
   'JD\Cloudder\CloudderServiceProvider'
