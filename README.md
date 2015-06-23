@@ -10,11 +10,14 @@ __Initially forked from https://github.com/teepluss/laravel4-cloudinary.
 As it doesn't seem to be maintained anymore, and facing the lack of response from the original maitainer (issue opened + pull request opened, last commit on August last year), I decided to create a new fork that I plan on maintaining.__
 
 
+
 ## Installation
 
 ```
-composer require jrm2k6/cloudder:0.1.*:dev-l5
+composer require jrm2k6/cloudder:0.2.*
 ```
+
+For people still using Laravel 4.2: ```composer require jrm2k6/cloudder:0.1.*``` and check the branch l4 for the installation instructions.
 
 
 ## Configuration
