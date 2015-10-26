@@ -9,7 +9,7 @@ Cloudinary wrapper for Laravel 5
 __Initially forked from https://github.com/teepluss/laravel4-cloudinary.
 As it doesn't seem to be maintained anymore, and facing the lack of response from the original maitainer (issue opened + pull request opened, last commit on August last year), I decided to create a new fork that I plan on maintaining.__
 
-# If there is any feature you would like feel free to open an issue or send me an email!
+## If there is any feature you would like feel free to open an issue or send me an email!
 
 ## Installation
 
