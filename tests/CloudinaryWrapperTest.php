@@ -4,7 +4,7 @@ use JD\Cloudder\CloudinaryWrapper;
 use Mockery as m;
 
 class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
-{   
+{
     public function setUp()
     {
         $this->config = m::mock('Illuminate\Config\Repository');
@@ -170,5 +170,28 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
         $this->api->shouldReceive('delete_resources')->once()->with($pids, array());
 
         $this->cloudinary_wrapper->destroyImages($pids);
+    }
+
+    /** @test */
+    public function it_should_set_uploaded_result_when_uploading_pvideo()
+    {
+        // given
+        $filename = 'filename';
+        $defaults_options = [
+            'public_id' => null,
+            'tags'      => array(),
+            'resource_type' => 'video'
+        ];
+
+        $expected_result = ['public_id' => '123456789'];
+
+        $this->uploader->shouldReceive('upload')->once()->with($filename, $defaults_options)->andReturn($expected_result);
+
+        // when
+        $this->cloudinary_wrapper->uploadVideo($filename);
+
+        // then
+        $result = $this->cloudinary_wrapper->getResult();
+        $this->assertEquals($expected_result, $result);
     }
 }
