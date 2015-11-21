@@ -64,23 +64,34 @@ with:
 
 returns the CloudinaryWrapper.
 
+``` 
+Cloudder::uploadVideo($filename, $publicId, $options, $tags);
+```
+with:
+- filename: path to the video you want to upload
+- publicId: the id you want your video to have on Cloudinary, leave it null to have Cloudinary generate a random id.
+- options: options for your uploaded video, check the cloudinary documentation to know more
+- tags: tags for your image
+
+returns the CloudinaryWrapper.
+
 ```
 Cloudder::getPublicId()
 ```
-returns the public id of the last uploaded image.
+returns the public id of the last uploaded resource.
 
 
 ```
 Cloudder::getResult()
 ```
-returns the result of the last uploaded image
+returns the result of the last uploaded resource
 
 ```
 Cloudder::show($publicId, $options)
 ```
 with:
 - publicId: public id of the resource to display
-- options: options for your uploaded image, check the cloudinary documentation to know more
+- options: options for your uploaded resource, check the cloudinary documentation to know more
 
 returns the url of the picture on cloudinary
 
@@ -89,8 +100,8 @@ Cloudder::showPrivateUrl($publicId, $format, $options)
 ```
 with:
 - publicId: public id of the resource to display
-- format: format of the picture your want to display
-- options: options for your uploaded image, check the cloudinary documentation to know more
+- format: format of the resource your want to display
+- options: options for your uploaded resource, check the cloudinary documentation to know more
 
 returns the private url of the picture on cloudinary, expiring by default after an hour.
 
@@ -102,7 +113,7 @@ Cloudder::rename($publicId, $toPublicId, $options)
 with: 
 - publicId: publicId of the resource to rename
 - toPublicId: new public id of the resource
-- options: options for your uploaded image, check the cloudinary documentation to know more
+- options: options for your uploaded resource, check the cloudinary documentation to know more
 
 renames the original picture with the toPublicId id.
 
@@ -133,7 +144,7 @@ Cloudder::addTag($tag, $publicIds, $options)
 with:
 - tag: tag to apply
 - publicIds: images to apply tag to
-- options: options for your uploaded image, check the cloudinary documentation to know more
+- options: options for your uploaded resource, check the cloudinary documentation to know more
 
 ```
 Cloudder::removeTag($tag, $publicIds, $options)
