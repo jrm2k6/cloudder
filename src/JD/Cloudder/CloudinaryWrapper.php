@@ -116,6 +116,21 @@ class CloudinaryWrapper {
     }
 
     /**
+     * Upload video to cloud.
+     *
+     * @param  mixed $source
+     * @param  string $publicId
+     * @param  array $uploadOptions
+     * @param  array $tags
+     * @return CloudinaryWrapper
+    */
+    public function uploadVideo($source, $publicId = null, $uploadOptions = array(), $tags = array())
+    {
+        $options = array_merge($uploadOptions, ['resource_type' => 'video']);
+        return $this->upload($source, $publicId,  $options, $tags);
+    }
+
+    /**
      * Uploaded result.
      *
      * @return array
