@@ -151,7 +151,7 @@ class CloudinaryWrapper {
     }
 
     /**
-     * Display image.
+     * Display resource through https.
      *
      * @param  string $publicId
      * @param  array  $options
@@ -164,6 +164,19 @@ class CloudinaryWrapper {
         $options = array_merge($defaults, $options);
 
         return $this->getCloudinary()->cloudinary_url($publicId, $options);
+    }
+
+    /**
+     * Display resource through https.
+     *
+     * @param  string $publicId
+     * @param  array  $options
+     * @return string
+     */
+    public function secureShow($publicId, $options = array())
+    {
+        $showOptions = array_merge(['secure' => true], $options);
+        return $this->getCloudinary()->cloudinary_url($publicId, $showOptions);
     }
 
     /**

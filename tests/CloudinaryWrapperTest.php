@@ -84,6 +84,17 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
+    public function it_should_returns_https_image_url_when_calling_secure_show()
+    {
+        // given
+        $filename = 'filename';
+        $this->cloudinary->shouldReceive('cloudinary_url')->once()->with($filename, ['secure' => true]);
+
+        // when
+        $this->cloudinary_wrapper->secureShow($filename);
+    }
+
+    /** @test */
     public function it_should_returns_image_url_when_calling_show_private_url()
     {
         // given
