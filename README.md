@@ -39,8 +39,6 @@ CLOUDINARY_SECURE_URL
 CLOUDINARY_API_BASE_URL
 ```
 
-Run ```php artisan vendor:publish --provider="JD\Cloudder\CloudderServiceProvider"```
-
 Add the following in config/app.php:
 ```
 'providers' => array(
@@ -51,6 +49,8 @@ Add the following in config/app.php:
   'Cloudder' => 'JD\Cloudder\Facades\Cloudder'
 );
 ```
+
+Run ```php artisan vendor:publish --provider="JD\Cloudder\CloudderServiceProvider"```
 ## Usage
 
 ```
