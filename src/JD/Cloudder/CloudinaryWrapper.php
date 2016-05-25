@@ -295,4 +295,17 @@ class CloudinaryWrapper {
         $options = array_merge($options, ['target_public_id' => $nameArchive, 'mode' => $mode]);
         return $this->getUploader()->create_archive($options);
     }
+
+    /**
+     * Download a zip file containing images matching options.
+     *
+     * @param array  $options
+     * @param string $archiveName
+     * @param string $mode
+     */
+    public function downloadArchiveUrl($options = array(), $nameArchive = null)
+    {
+        $options = array_merge($options, ['target_public_id' => $nameArchive]);
+        return $this->getCloudinary()->download_archive_url($options);
+    }
 }

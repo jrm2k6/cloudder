@@ -229,4 +229,28 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
         // when
         $this->cloudinary_wrapper->createArchive(['tag' => 'kitten'], 'kitten_archive');
     }
+
+    /** @test */
+    public function it_should_call_api_download_archive_url_when_generating_archive()
+    {
+        // given
+        $this->cloudinary->shouldReceive('download_archive_url')->once()->with(
+          ['tag' => 'kitten', 'target_public_id' => null]
+        );
+
+        // when
+        $this->cloudinary_wrapper->downloadArchiveUrl(['tag' => 'kitten']);
+    }
+
+    /** @test */
+    public function it_should_call_api_download_archive_url_with_correct_archive_name()
+    {
+        // given
+        $this->cloudinary->shouldReceive('download_archive_url')->once()->with(
+          ['tag' => 'kitten', 'target_public_id' => 'kitten_archive']
+        );
+
+        // when
+        $this->cloudinary_wrapper->downloadArchiveUrl(['tag' => 'kitten'], 'kitten_archive');
+    }
 }
