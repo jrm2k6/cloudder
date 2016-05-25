@@ -205,4 +205,28 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
         $result = $this->cloudinary_wrapper->getResult();
         $this->assertEquals($expected_result, $result);
     }
+
+    /** @test */
+    public function it_should_call_api_create_archive_when_generating_archive()
+    {
+        // given
+        $this->uploader->shouldReceive('create_archive')->once()->with(
+          ['tag' => 'kitten', 'mode' => 'create', 'target_public_id' => null]
+        );
+
+        // when
+        $this->cloudinary_wrapper->createArchive(['tag' => 'kitten']);
+    }
+
+    /** @test */
+    public function it_should_call_api_create_archive_with_correct_archive_name()
+    {
+        // given
+        $this->uploader->shouldReceive('create_archive')->once()->with(
+          ['tag' => 'kitten', 'mode' => 'create', 'target_public_id' => 'kitten_archive']
+        );
+
+        // when
+        $this->cloudinary_wrapper->createArchive(['tag' => 'kitten'], 'kitten_archive');
+    }
 }

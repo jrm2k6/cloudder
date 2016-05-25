@@ -283,4 +283,16 @@ class CloudinaryWrapper {
         return $this->getUploader()->replace_tag($tag, $publicIds, $options);
     }
 
+    /**
+     * Create a zip file containing images matching options.
+     *
+     * @param array  $options
+     * @param string $archiveName
+     * @param string $mode
+     */
+    public function createArchive($options = array(), $nameArchive = null, $mode = 'create')
+    {
+        $options = array_merge($options, ['target_public_id' => $nameArchive, 'mode' => $mode]);
+        return $this->getUploader()->create_archive($options);
+    }
 }
