@@ -184,7 +184,7 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    public function it_should_set_uploaded_result_when_uploading_pvideo()
+    public function it_should_set_uploaded_result_when_uploading_video()
     {
         // given
         $filename = 'filename';
