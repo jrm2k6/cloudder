@@ -156,6 +156,26 @@ with:
 - publicIds: images to remove tag from
 - options: options for your uploaded image, check the Cloudinary documentation to know more
 
+
+```
+Cloudder::createArchive($options, $archiveName, $mode)
+```
+with:
+- options: options for your archive, like name, tag/prefix/public ids to select images
+- archiveName: name you want to give to your archive
+- mode: 'create' or 'download' ('create' will create an archive and returns a JSON response with the properties of the archive, 'download' will return the zip file for download)
+
+creates a zip file on Cloudinary
+
+```
+Cloudder::downloadArchiveUrl($options, $archiveName)
+```
+with:
+- options: options for your archive, like name, tag/prefix/public ids to select images
+- archiveName: name you want to give to your archive
+
+returns a download url for the newly created archive on Cloudinary
+
 ## Running tests
 
 ```

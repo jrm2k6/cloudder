@@ -413,6 +413,7 @@ class CloudinaryWrapper
         $options = array_merge($options, ['target_public_id' => $nameArchive]);
         return $this->getCloudinary()->download_archive_url($options);
     }
+<<<<<<< HEAD
 
 
     /**
@@ -718,4 +719,6 @@ class CloudinaryWrapper
         return $this->getApi()->ping($options);
     }
 
+=======
+>>>>>>> jrm2k6/master
 }
