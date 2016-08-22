@@ -208,7 +208,6 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-<<<<<<< HEAD
     public function it_should_call_api_delete_resources_when_calling_delete_resources()
     {
         $pids = ['pid1', 'pid2'];
@@ -253,8 +252,6 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-=======
->>>>>>> jrm2k6/master
     public function it_should_set_uploaded_result_when_uploading_video()
     {
         // given
@@ -324,7 +321,6 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
         // when
         $this->cloudinary_wrapper->downloadArchiveUrl(['tag' => 'kitten'], 'kitten_archive');
     }
-<<<<<<< HEAD
 
     /** @test */
     public function it_should_show_response_when_calling_resources()
@@ -638,6 +634,4 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
         // when
         $this->cloudinary_wrapper->ping();
     }
-=======
->>>>>>> jrm2k6/master
 }

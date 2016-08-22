@@ -413,7 +413,6 @@ class CloudinaryWrapper
         $options = array_merge($options, ['target_public_id' => $nameArchive]);
         return $this->getCloudinary()->download_archive_url($options);
     }
-<<<<<<< HEAD
 
 
     /**
@@ -549,7 +548,7 @@ class CloudinaryWrapper
      * @param  string $name
      * @param  string $definition
      * @param  array  $options
-     * @return null
+     * @return array
      */
     public function createTransformation($name, $definition, $options=array())
     {
@@ -558,9 +557,9 @@ class CloudinaryWrapper
 
     /**
      * List Upload Mappings
-     * 
+     *
      * @param  array  $options
-     * @return null
+     * @return array
      */
     public function uploadMappings($options=array())
     {
@@ -569,10 +568,10 @@ class CloudinaryWrapper
 
     /**
      * Get upload mapping
-     * 
-     * @param  string $name   
+     *
+     * @param  string $name
      * @param  array  $options
-     * @return array        
+     * @return array
      */
     public function uploadMapping($name, $options=array())
     {
@@ -581,10 +580,10 @@ class CloudinaryWrapper
 
     /**
      * Create upload mapping
-     * 
-     * @param  string $name   
+     *
+     * @param  string $name
      * @param  array  $options
-     * @return array        
+     * @return array
      */
     public function createUploadMapping($name, $options=array())
     {
@@ -593,10 +592,10 @@ class CloudinaryWrapper
 
     /**
      * Delete upload mapping
-     * 
-     * @param  string $name   
+     *
+     * @param  string $name
      * @param  array  $options
-     * @return array        
+     * @return array
      */
     public function deleteUploadMapping($name, $options=array())
     {
@@ -605,10 +604,10 @@ class CloudinaryWrapper
 
     /**
      * Update upload mapping
-     * 
-     * @param  string $name   
+     *
+     * @param  string $name
      * @param  array  $options
-     * @return array        
+     * @return array
      */
     public function updateUploadMapping($name, $options=array())
     {
@@ -617,9 +616,9 @@ class CloudinaryWrapper
 
     /**
      * List Upload Presets
-     * 
+     *
      * @param  array  $options
-     * @return null
+     * @return array
      */
     public function uploadPresets($options=array())
     {
@@ -628,10 +627,10 @@ class CloudinaryWrapper
 
     /**
      * Get upload mapping
-     * 
-     * @param  string $name   
+     *
+     * @param  string $name
      * @param  array  $options
-     * @return array        
+     * @return array
      */
     public function uploadPreset($name, $options=array())
     {
@@ -640,10 +639,10 @@ class CloudinaryWrapper
 
     /**
      * Create upload preset
-     * 
-     * @param  string $name   
+     *
+     * @param  string $name
      * @param  array  $options
-     * @return array        
+     * @return array
      */
     public function createUploadPreset($name, $options=array())
     {
@@ -652,10 +651,10 @@ class CloudinaryWrapper
 
     /**
      * Delete upload preset
-     * 
-     * @param  string $name   
+     *
+     * @param  string $name
      * @param  array  $options
-     * @return array        
+     * @return array
      */
     public function deleteUploadPreset($name, $options=array())
     {
@@ -664,10 +663,10 @@ class CloudinaryWrapper
 
     /**
      * Update upload preset
-     * 
-     * @param  string $name   
+     *
+     * @param  string $name
      * @param  array  $options
-     * @return array        
+     * @return array
      */
     public function updateUploadPreset($name, $options=array())
     {
@@ -676,9 +675,9 @@ class CloudinaryWrapper
 
     /**
      * List Root folders
-     * 
+     *
      * @param  array  $options
-     * @return null
+     * @return array
      */
     public function rootFolders($options=array())
     {
@@ -687,10 +686,10 @@ class CloudinaryWrapper
 
     /**
      * List subfolders
-     * 
-     * @param  string $name   
+     *
+     * @param  string $name
      * @param  array  $options
-     * @return array         
+     * @return array
      */
     public function subfolders($name, $options=array())
     {
@@ -699,7 +698,7 @@ class CloudinaryWrapper
 
     /**
      * Get usage details
-     * 
+     *
      * @param  array  $options
      * @return array
      */
@@ -710,7 +709,7 @@ class CloudinaryWrapper
 
     /**
      * Ping cloudinary servers
-     * 
+     *
      * @param  array  $options
      * @return array
      */
@@ -718,7 +717,4 @@ class CloudinaryWrapper
     {
         return $this->getApi()->ping($options);
     }
-
-=======
->>>>>>> jrm2k6/master
 }
