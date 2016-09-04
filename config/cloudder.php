@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
 
     /*
     |--------------------------------------------------------------------------
@@ -19,12 +19,12 @@ return array(
     'apiKey'     => env('CLOUDINARY_API_KEY'),
     'apiSecret'  => env('CLOUDINARY_API_SECRET'),
 
-    'scaling'    => array(
+    'scaling'    => [
         'format' => 'png',
         'width'  => 150,
         'height' => 150,
         'crop'   => 'fit',
         'effect' => null
-    )
+    ],
 
-);
+];
