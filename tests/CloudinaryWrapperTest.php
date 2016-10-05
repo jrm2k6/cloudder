@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace JD\Cloudder\Test;
 
@@ -90,6 +90,7 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
     {
         // given
         $filename = 'filename';
+        $this->config->shouldReceive('get')->with('cloudder.scaling')->once()->andReturn(array());
         $this->cloudinary->shouldReceive('cloudinary_url')->once()->with($filename, ['secure' => true]);
 
         // when
