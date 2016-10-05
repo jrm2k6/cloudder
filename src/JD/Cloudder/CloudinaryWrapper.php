@@ -184,7 +184,12 @@ class CloudinaryWrapper
      */
     public function secureShow($publicId, $options = array())
     {
+        $defaults = $this->config->get('cloudder.scaling');
+        
+        $options = array_merge($defaults, $options);
+        
         $options = array_merge(['secure' => true], $options);
+        
         return $this->getCloudinary()->cloudinary_url($publicId, $options);
     }
 
