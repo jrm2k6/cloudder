@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace JD\Cloudder;
 
@@ -7,7 +7,7 @@ use Illuminate\Config\Repository;
 
 class CloudinaryWrapper
 {
-    
+
     /**
      * Cloudinary lib.
      *
@@ -125,6 +125,35 @@ class CloudinaryWrapper
     }
 
     /**
+     * Upload image to cloud.
+     *
+     * @param  mixed $source
+     * @param  string $publicId
+     * @param  array $uploadPresets
+     * @param  array $uploadOptions
+     * @param  array $tags
+     * @return CloudinaryWrapper
+     */
+    public function unsignedUpload($source, $publicId = null, $uploadPresets = array(),
+        $uploadOptions = array(), $tags = array())
+    {
+        $defaults = array(
+            'public_id' => null,
+            'tags'      => array()
+        );
+
+        $options = array_merge($defaults, array(
+            'public_id' => $publicId,
+            'tags'      => $tags,
+        ));
+
+        $options = array_merge($options, $uploadOptions);
+        $this->uploadedResult = $this->getUploader()->unsigned_upload($source, $uploadPresets, $options);
+
+        return $this;
+    }
+
+    /**
      * Upload video to cloud.
      *
      * @param  mixed $source
@@ -185,11 +214,11 @@ class CloudinaryWrapper
     public function secureShow($publicId, $options = array())
     {
         $defaults = $this->config->get('cloudder.scaling');
-        
+
         $options = array_merge($defaults, $options);
-        
+
         $options = array_merge(['secure' => true], $options);
-        
+
         return $this->getCloudinary()->cloudinary_url($publicId, $options);
     }
 
@@ -430,7 +459,7 @@ class CloudinaryWrapper
     {
         return $this->getApi()->resources($options);
     }
-    
+
     /**
      * Show Resources by id
      *
