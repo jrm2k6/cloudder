@@ -51,6 +51,34 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
+    public function it_should_set_uploaded_result_when_uploading_picture_unsigned()
+    {
+        // given
+        $filename = 'filename';
+        $defaults_options = [
+            'public_id' => null,
+            'tags'      => array()
+        ];
+
+        $upload_presets = [
+            'param' => 1
+        ];
+
+        $expected_result = ['public_id' => '123456789'];
+
+        $this->uploader->shouldReceive('unsigned_upload')->once()
+            ->with($filename, $upload_presets, $defaults_options)
+            ->andReturn($expected_result);
+
+        // when
+        $this->cloudinary_wrapper->unsignedUpload($filename, null, $upload_presets);
+
+        // then
+        $result = $this->cloudinary_wrapper->getResult();
+        $this->assertEquals($expected_result, $result);
+    }
+
+    /** @test */
     public function it_should_set_uploaded_result_when_uploading_private_picture()
     {
         // given
