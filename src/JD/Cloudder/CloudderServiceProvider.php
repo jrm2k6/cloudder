@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace JD\Cloudder;
 
@@ -38,6 +38,7 @@ class CloudderServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        dd('ahahah');
         $this->app['cloudder'] = $this->app->share(function ($app) {
             return new CloudinaryWrapper($app['config'], new Cloudinary, new Cloudinary\Uploader, new Cloudinary\Api);
         });
