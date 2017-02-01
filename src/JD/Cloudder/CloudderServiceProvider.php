@@ -38,8 +38,8 @@ class CloudderServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        dd('ahahah');
-        $this->app['cloudder'] = $this->app->share(function ($app) {
+        $app = $this->app;
+        $this->app->singleton('cloudder', function () use ($app) {
             return new CloudinaryWrapper($app['config'], new Cloudinary, new Cloudinary\Uploader, new Cloudinary\Api);
         });
     }
