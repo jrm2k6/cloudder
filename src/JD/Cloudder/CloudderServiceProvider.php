@@ -22,9 +22,12 @@ class CloudderServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([
-            __DIR__.'/../../../config/cloudder.php' => config_path('cloudder.php')
-        ]);
+        $source = realpath(__DIR__.'/../../../config/cloudder.php');
+
+        if (class_exists('Illuminate\Foundation\Application', false)) {
+            $this->publishes([$source => config_path('cloudder.php')]);
+        }
+        $this->mergeConfigFrom($source, 'cloudder');
 
         $this->app['JD\Cloudder\Cloudder'] = function ($app) {
             return $app['cloudder'];
