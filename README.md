@@ -1,4 +1,4 @@
-# Cloudder - Cloudinary wrapper for Laravel 5
+# Cloudder - Cloudinary wrapper for Laravel 5 / Lumen
 
 [![Build Status](http://img.shields.io/travis/jrm2k6/cloudder/master.svg?style=flat-square)](https://travis-ci.org/jrm2k6/cloudder)
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://www.opensource.org/licenses/MIT)
@@ -13,7 +13,7 @@
 
 ## Installation
 
-`composer require jrm2k6/cloudder:0.3.*`
+`composer require jrm2k6/cloudder:0.4.*`
 
 For people still using Laravel 4.2: `composer require jrm2k6/cloudder:0.1.*` and check the branch l4 for the installation instructions.
 
