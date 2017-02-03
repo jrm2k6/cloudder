@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace JD\Cloudder;
 
@@ -22,9 +22,12 @@ class CloudderServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([
-            __DIR__.'/../../../config/cloudder.php' => config_path('cloudder.php')
-        ]);
+        $source = realpath(__DIR__.'/../../../config/cloudder.php');
+
+        if (class_exists('Illuminate\Foundation\Application', false)) {
+            $this->publishes([$source => config_path('cloudder.php')]);
+        }
+        $this->mergeConfigFrom($source, 'cloudder');
 
         $this->app['JD\Cloudder\Cloudder'] = function ($app) {
             return $app['cloudder'];
@@ -38,7 +41,8 @@ class CloudderServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app['cloudder'] = $this->app->share(function ($app) {
+        $app = $this->app;
+        $this->app->singleton('cloudder', function () use ($app) {
             return new CloudinaryWrapper($app['config'], new Cloudinary, new Cloudinary\Uploader, new Cloudinary\Api);
         });
     }
