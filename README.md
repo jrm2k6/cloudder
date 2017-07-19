@@ -64,7 +64,7 @@ with:
 
 * `$filename`: path to the image you want to upload
 * `$publicId`: the id you want your picture to have on Cloudinary, leave it null to have Cloudinary generate a random id.
-* `$options`: options for your uploaded image, check the Cloudinary documentation to know more
+* `$options`: options for your uploaded image, check the [Cloudinary documentation](http://cloudinary.com/documentation/php_image_upload#all_upload_options) to know more
 * `$tags`: tags for your image
 
 returns the `CloudinaryWrapper`.
