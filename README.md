@@ -24,10 +24,11 @@ Modify your `.env` file to add the following information from [Cloudinary](http:
 
 ### Required
 
+
 ```
-CLOUDINARY_API_KEY=`your key`
-CLOUDINARY_API_SECRET=`your secret`
-CLOUDINARY_CLOUD_NAME=`your cloud name`
+CLOUDINARY_API_KEY=012345679890123
+CLOUDINARY_API_SECRET=foobarfoobarfoob-arfoobarfo
+CLOUDINARY_CLOUD_NAME=foobarcorp
 ```
 
 ### Optional
