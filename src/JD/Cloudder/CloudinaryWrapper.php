@@ -479,7 +479,7 @@ class CloudinaryWrapper
      */
     public function resourcesByTag($tag, $options = array())
     {
-        return $this->getApi()->resources_by_tag($tag, $options));
+        return $this->getApi()->resources_by_tag($tag, $options);
     }
 
     /**
