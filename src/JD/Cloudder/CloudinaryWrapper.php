@@ -479,7 +479,7 @@ class CloudinaryWrapper
      */
     public function resourcesByTag($tag, $options = array())
     {
-        return $this->getApi()->resources_by_tag($tag, $options = array());
+        return $this->getApi()->resources_by_tag($tag, $options);
     }
 
     /**
@@ -491,7 +491,7 @@ class CloudinaryWrapper
      */
     public function resourcesByModeration($kind, $status, $options = array())
     {
-        return $this->getApi()->resources_by_moderation($kind, $status, $options = array());
+        return $this->getApi()->resources_by_moderation($kind, $status, $options);
     }
 
     /**
