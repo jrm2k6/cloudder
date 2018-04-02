@@ -38,6 +38,8 @@ CLOUDINARY_BASE_URL
 CLOUDINARY_SECURE_URL
 CLOUDINARY_API_BASE_URL
 ```
+Laravel 5.5+ uses Package Auto-Discovery, so doesn't require you to manually add the ServiceProvider.
+If you don't use auto-discovery follow the next steps:
 
 Add the following in config/app.php:
 
