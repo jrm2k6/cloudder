@@ -13,7 +13,7 @@
 
 ## Installation
 
-`composer require jrm2k6/cloudder:0.4.*`
+`composer require jrm2k6/cloudder`
 
 For people still using Laravel 4.2: `composer require jrm2k6/cloudder:0.1.*` and check the branch l4 for the installation instructions.
 
