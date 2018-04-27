@@ -32,7 +32,7 @@
                 "JD\\Cloudder\\CloudderServiceProvider"
             ],
             "aliases": {
-                "Cloudder": "JD\\Cloudder\\Facades"
+                "Cloudder": "JD\\Cloudder\\Facades\\Cloudder"
             }
         }
     }
