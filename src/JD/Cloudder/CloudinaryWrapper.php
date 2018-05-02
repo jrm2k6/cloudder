@@ -463,13 +463,13 @@ class CloudinaryWrapper
     /**
      * Show Resources by id
      *
-     * @param  string $public_ids
-     * @param  array  $options
+     * @param  array $publicIds
+     * @param  array $options
      * @return array
      */
-    public function resourcesByIds($public_ids, $options = array())
+    public function resourcesByIds($publicIds, $options = array())
     {
-        return $this->getApi()->resources_by_ids($public_ids, $options);
+        return $this->getApi()->resources_by_ids($publicIds, $options);
     }
 
     /**
