@@ -8,7 +8,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Before using Cloudinary you need to register and get some detail
-    | to fill in below, please visit cloudinary.com.
+    | to fill in below, please visit https://cloudinary.com.
     |
     */
 
