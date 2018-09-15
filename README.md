@@ -45,11 +45,11 @@ Add the following in config/app.php:
 
 ```php
 'providers' => array(
-  'JD\Cloudder\CloudderServiceProvider'
+  JD\Cloudder\CloudderServiceProvider::class,
 );
 
 'aliases' => array(
-  'Cloudder' => 'JD\Cloudder\Facades\Cloudder'
+  'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
 );
 ```
 
