@@ -154,8 +154,8 @@ Cloudder::delete($publicId, array $options)
 
 with:
 
-* `$publicId`: publicId of the resource to rename
-* `$options`: options for your uploaded image, check the cloudinary documentation to know more
+* `$publicId`: publicId of the resource to remove
+* `$options`: options for the image to delete, check the cloudinary documentation to know more
 
 removes image from Cloudinary.
 
