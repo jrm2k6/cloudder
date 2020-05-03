@@ -1,7 +1,7 @@
 {
-    "name": "jrm2k6/cloudder",
+    "name": "el3zahaby/cloudder",
     "description": "Cloudinary API wrapper for Laravel",
-    "keywords": ["laravel", "laravel4", "cloudinary", "api", "image", "upload"],
+    "keywords": ["laravel", "laravel7", "cloudinary", "api", "image", "upload"],
     "homepage": "https://github.com/jrm2k6/cloudder",
     "type": "library",
     "license": "MIT",
@@ -9,11 +9,14 @@
         {
             "name": "Jeremy Dagorn",
             "email": "jeremy.dagorn@gmail.com"
+        },{
+            "name": "A. Elzahaby",
+            "email": "el3zahbay@gmail.com"
         }
     ],
     "require": {
         "php": ">=5.3.0",
-        "cloudinary/cloudinary_php": ">=1.1"
+        "cloudinary/cloudinary_php": ">=1.16"
     },
     "require-dev": {
         "laravel/framework": ">=5.0",
@@ -29,10 +32,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "JD\\Cloudder\\CloudderServiceProvider"
+                El3zahaby\\Cloudder\\CloudderServiceProvider"
             ],
             "aliases": {
-                "Cloudder": "JD\\Cloudder\\Facades\\Cloudder"
+                "Cloudder": "El3zahaby\\Cloudder\\Facades\\Cloudder"
             }
         }
     }
