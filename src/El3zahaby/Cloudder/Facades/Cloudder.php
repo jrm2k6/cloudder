@@ -1,6 +1,6 @@
 <?php 
 
-namespace JD\Cloudder\Facades;
+namespace El3zahaby\Cloudder\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

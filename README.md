@@ -44,15 +44,15 @@ Add the following in config/app.php:
 
 ```php
 'providers' => array(
-  JD\Cloudder\CloudderServiceProvider::class,
+  El3zahaby\Cloudder\CloudderServiceProvider::class,
 );
 
 'aliases' => array(
-  'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
+  'Cloudder' => El3zahaby\Cloudder\Facades\Cloudder::class,
 );
 ```
 
-Run `php artisan vendor:publish --provider="JD\Cloudder\CloudderServiceProvider"`
+Run `php artisan vendor:publish --provider="El3zahaby\Cloudder\CloudderServiceProvider"`
 
 ## Usage
 

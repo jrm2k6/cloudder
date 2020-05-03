@@ -1,6 +1,6 @@
 <?php
 
-namespace JD\Cloudder;
+namespace El3zahaby\Cloudder;
 
 use Cloudinary;
 use Illuminate\Config\Repository;

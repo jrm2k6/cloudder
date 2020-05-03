@@ -1,6 +1,6 @@
 <?php
 
-namespace JD\Cloudder;
+namespace El3zahaby\Cloudder;
 
 use Illuminate\Support\ServiceProvider;
 use Cloudinary;
@@ -29,7 +29,7 @@ class CloudderServiceProvider extends ServiceProvider
         }
         $this->mergeConfigFrom($source, 'cloudder');
 
-        $this->app['JD\Cloudder\Cloudder'] = function ($app) {
+        $this->app['El3zahaby\Cloudder\Cloudder'] = function ($app) {
             return $app['cloudder'];
         };
     }
