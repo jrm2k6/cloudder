@@ -32,7 +32,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                El3zahaby\\Cloudder\\CloudderServiceProvider"
+                "El3zahaby\\Cloudder\\CloudderServiceProvider"
             ],
             "aliases": {
                 "Cloudder": "El3zahaby\\Cloudder\\Facades\\Cloudder"
