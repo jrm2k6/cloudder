@@ -1,13 +1,14 @@
 # Cloudder - Cloudinary wrapper for Laravel 5 / Lumen
 
+
+#### This project is not actively maintained. I might be slow to answer, as you can tell by looking at the issues. I have moved to some new projects, not in the PHP ecosystem. You can always reach out to me through my email.
+
 [![Build Status](http://img.shields.io/travis/jrm2k6/cloudder/master.svg?style=flat-square)](https://travis-ci.org/jrm2k6/cloudder)
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://www.opensource.org/licenses/MIT)
 [![Latest Version](http://img.shields.io/packagist/v/jrm2k6/cloudder.svg?style=flat-square)](https://packagist.org/packages/jrm2k6/cloudder)
 [![Total Downloads](https://img.shields.io/packagist/dt/jrm2k6/cloudder.svg?style=flat-square)](https://packagist.org/packages/jrm2k6/cloudder)
 
 > Initially forked from https://github.com/teepluss/laravel4-cloudinary.
-
-> As it doesn't seem to be maintained anymore, and facing the lack of response from the original maitainer (issue opened + pull request opened, last commit on August last year), I decided to create a new fork that I plan on maintaining.
 
 > **If there is any feature you would like feel free to open an issue or send me an email!**
 
